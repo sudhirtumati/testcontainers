@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -46,6 +46,12 @@
 			<version>1.12.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.oracle.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>12.2.0.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -56,5 +62,13 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- Repository for Oracle JDBC driver -->
+	<repositories>
+		<repository>
+			<id>xwiki-externals</id>
+			<url>https://maven.xwiki.org/externals/</url>
+		</repository>
+	</repositories>
 
 </project>
